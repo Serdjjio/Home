@@ -15,7 +15,6 @@ public class Main {
         Person p3 = new Person("Maria", 26, a3);
         Person p4 = new Person("Elena", 10, a4);
 
-
         List<Person> persons = Arrays.asList(p1,p2,p3,p4);
 
 
@@ -49,14 +48,13 @@ public class Main {
                 "Maria",
                 "Ian");
 //        System.out.println(listName1.collect(Collectors.groupingBy(String::length)));
-
        Map<Integer, List<String>> listMapa = listName1
                .collect(Collectors.groupingBy(String::length));
         listMapa.forEach((k ,v)->{
             System.out.println(k+""+v);
         });
         System.out.println("3_____*****************************");
-//      которая вернет мапу, где ключом является возраст, а значением список людей этого возраста
+//      которая вернет мапу, ключом является количество букв имени, а значение имена.
         System.out.println();
 
         Map<Integer, String> listMap1 = persons
@@ -211,5 +209,4 @@ public class Main {
         }
         return true;
     }
-
 }
